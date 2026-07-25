@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>AnimeSubs</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body id="top">
+
+
+
+<header>
+
+
+<div class="logo">
+
+    <i class="fa-solid fa-tv"></i>
+
+    <h1>
+        Anime<span class="subs-logo">Subs<span class="beta">BETA</span></span>
+    </h1>
+
+</div>
+
+
+
+<nav>
+
+    <a href="#top">
+        Inicio
+    </a>
+
+
+    <a href="#anime">
+        Anime
+    </a>
+
+
+    <a href="recomendar.html">
+        Recomendar
+    </a>
+
+    <a href="reportar.html">
+        Reportar
+    </a>
+
+</nav>
+
+
+
+
+
+<div class="search">
+
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+
+    <input
+
+    type="text"
+
+    id="search"
+
+    placeholder="Buscar anime..."
+
+    autocomplete="off"
+
+    >
+
+
+
+    <i class="fa-solid fa-xmark" id="clearSearch"></i>
+
+
+
+    <div id="suggestions"></div>
+
+
+
+</div>
+
+
+
+
+
+<div class="menu-options">
+
+
+<div class="menu-container">
+
+
+<button id="menuButton">
+
+⋮
+
+</button>
+
+
+
+
+<div id="menuDropdown">
+
+
+<button id="closeMenu" class="close-menu">
+
+✕
+
+</button>
+
+
+
+
+<a href="favoritos.html">
+
+⭐ Favoritos <span id="favCount">(0)</span>
+
+</a>
+
+
+
+
+<a href="historial.html">
+
+🕘 Historial
+
+</a>
+
+
+
+<a href="reportar.html">
+
+⚠️ Reportar problema
+
+</a>
+
+
+
+<a href="hotkeys.html">
+
+⌨️ Teclas
+
+</a>
+
+
+
+
+<div class="theme-container">
+
+
+<button id="themeButton">
+
+🎨 Tema ▸
+
+</button>
+
+
+
+
+<div id="themeOptions">
+
+
+<button onclick="setTheme('dark')">
+
+🌙 Oscuro
+
+</button>
+
+
+
+<button onclick="setTheme('light')">
+
+☀ Claro
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+<div class="filters">
+
+<button id="randomAnime">
+
+🎲 Aleatorio
+
+</button>
+
+<select id="genreFilter">
+
+
+<option value="all">
+
+Todos los generos
+
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="typeFilter">
+
+
+<option value="all">
+
+Todos los tipos
+
+</option>
+
+
+<option value="Serie">
+
+Serie
+
+</option>
+
+
+<option value="Pelicula">
+
+Pelicula
+
+</option>
+
+
+<option value="OVA">
+
+OVA
+
+</option>
+
+
+<option value="Especial">
+
+Especial
+
+</option>
+
+
+</select>
+
+
+
+<select id="statusFilter">
+
+    <option value="all">
+        Todos los estados
+    </option>
+
+    <option value="Concluido">
+        Concluido
+    </option>
+
+    <option value="En emision">
+        En emision
+    </option>
+
+    <option value="No disponible">
+        No disponible
+    </option>
+
+    <option value="Descontinuado">
+        Descontinuado
+    </option>
+
+</select>
+
+
+
+<select id="sortFilter">
+
+
+<option value="default">
+
+Ordenar por
+
+</option>
+
+
+
+<option value="nameAZ">
+
+Nombre A-Z
+
+</option>
+
+
+
+<option value="nameZA">
+
+Nombre Z-A
+
+</option>
+
+
+
+<option value="new">
+
+Fecha mas nueva
+
+</option>
+
+
+
+<option value="old">
+
+Fecha mas antigua
+
+</option>
+
+
+
+<option value="type">
+
+Tipo
+
+</option>
+
+
+
+<option value="latest">
+Ultimos agregados
+</option>
+
+<option value="rating">
+Mejor clasificado
+</option>
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<section class="banner">
+
+
+<div class="banner-content">
+
+
+<h2>
+Ve Anime Gratis
+</h2>
+
+
+
+<p>
+
+Sin anuncios • Rapido • Sencillo
+
+</p>
+
+
+
+
+
+<div class="banner-buttons">
+
+
+<a href="#anime" class="watch">
+
+
+<i class="fa-solid fa-play"></i>
+
+
+Ver Anime
+
+
+</a>
+
+
+
+
+
+<a href="recomendar.html" class="recommend">
+
+
+<i class="fa-solid fa-star"></i>
+
+
+Recomendar
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+<section id="continueSection" style="display:none;">
+
+<h2 class="section-title">
+Continuar viendo
+</h2>
+
+
+<div id="continueGrid" class="grid">
+
+</div>
+
+</section>
+
+
+
+<main>
+
+    <section id="latestSection">
+
+<h2 class="section-title">
+
+Ultimos agregados
+
+</h2>
+
+
+<div id="latestGrid" class="grid">
+
+</div>
+
+
+</section>
+
+<section id="anime">
+
+
+<h2 class="section-title">
+
+Animes
+
+</h2>
+
+
+
+
+
+<div id="animeGrid" class="grid">
+
+<div class="loading-text">
+    Cargando AnimeSubs...
+</div>
+
+</div>
+
+<div class="pagination">
+
+<button id="prevPage">
+◀ Atras
+</button>
+
+<span id="pageInfo">
+Pagina 1
+</span>
+
+<button id="nextPage">
+Siguiente ▶
+</button>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+
+AnimeSubs
+
+</h2>
+
+
+
+<p>
+
+Ve anime de forma rapida y sencilla.
+
+</p>
+
+
+
+<p>
+
+© 2026 AnimeSubs
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>

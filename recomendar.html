@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Recomendar Anime</title>
+
+
+<link rel="stylesheet" href="recomendar.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Volver
+
+</a>
+
+
+<div class="logo-page">
+
+    <i class="fa-solid fa-tv"></i>
+
+    <h1 class="as">
+        AnimeSubs
+    </h1>
+
+</div>
+
+</header>
+
+
+
+
+
+<main>
+
+
+<section class="form-container">
+
+
+<h2>
+Recomendar Anime
+</h2>
+
+
+
+<p class="subtitle">
+Recomienda un anime para añadirlo a AnimeSubs
+</p>
+
+
+
+
+<form id="animeForm">
+
+
+
+<label>
+Nombre del anime
+</label>
+
+
+<input 
+type="text" 
+id="nombre"
+placeholder="Ej: Another"
+required>
+
+
+
+
+
+<label>
+Genero
+</label>
+
+
+<input 
+type="text"
+id="genero"
+placeholder="Ej: Terror, Misterio">
+
+
+
+
+
+<label>
+Año
+</label>
+
+
+<input 
+type="number"
+id="anio"
+placeholder="Ej: 2012">
+
+
+
+
+
+
+<label>
+¿Por que lo recomiendas?
+</label>
+
+
+<textarea 
+id="descripcion"
+placeholder="Escribe una pequeña reseña..."
+required></textarea>
+
+
+
+
+
+
+<label>
+Tu nombre (opcional)
+</label>
+
+
+<input 
+type="text"
+id="usuario"
+placeholder="Anonimo">
+
+
+
+
+
+
+<button type="submit">
+
+Enviar recomendacion
+
+</button>
+
+
+
+
+</form>
+
+
+
+
+<p id="mensaje"></p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="lista-container">
+
+
+
+<h2>
+Ultimas recomendaciones
+</h2>
+
+
+
+<div id="listaRecomendaciones">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+<script>
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+    document.body.classList.add("light");
+}
+
+</script>
+
+<script src="recomendar.js"></script>
+
+
+
+</body>
+
+</html>

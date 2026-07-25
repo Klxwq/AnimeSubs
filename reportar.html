@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reportar problema</title>
+
+
+<link rel="stylesheet" href="reportar.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Volver
+
+</a>
+
+
+
+<div class="logo-page">
+
+<i class="fa-solid fa-tv"></i>
+
+<h1>
+AnimeSubs
+</h1>
+
+</div>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+
+<section class="form-container">
+
+
+
+<h2>
+
+⚠️ Reportar problema
+
+</h2>
+
+
+
+<p class="subtitle">
+
+¿Encontraste un bug? Reportalo para mejorar AnimeSubs
+
+</p>
+
+
+
+
+
+<form id="reportForm">
+
+
+
+<label>
+
+Problema
+
+</label>
+
+
+
+
+<textarea id="problema" placeholder="Ej: El episodio 5 no carga, una imagen no aparece..." required></textarea>
+
+
+
+
+<label>
+
+Tu nombre (opcional)
+
+</label>
+
+
+
+
+<input
+
+type="text"
+
+id="usuario"
+
+placeholder="Anonimo">
+
+
+
+
+
+<button type="submit">
+
+Enviar reporte
+
+</button>
+
+<p id="mensaje"></p>
+
+
+</form>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="lista-container">
+
+
+
+<h2>
+
+Problemas reportados
+
+</h2>
+
+
+
+
+<div id="listaReportes">
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<script>
+
+
+const savedTheme =
+localStorage.getItem("theme");
+
+
+
+if(savedTheme === "light"){
+
+document.body.classList.add("light");
+
+}
+
+
+
+</script>
+
+
+
+
+<script src="reportar.js"></script>
+
+
+
+</body>
+
+</html>

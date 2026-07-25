@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Historial - AnimeSubs</title>
+
+<link rel="stylesheet" href="historial.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Volver
+
+</a>
+
+
+
+<div class="logo-page">
+
+<i class="fa-solid fa-tv"></i>
+
+<h1>
+AnimeSubs
+</h1>
+
+</div>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+
+<section class="history-settings">
+
+
+<h2>
+Historial
+</h2>
+
+
+
+<label>
+
+Borrar automaticamente:
+
+</label>
+
+
+
+<select id="autoDelete">
+
+
+<option value="0">
+Desactivado
+</option>
+
+
+<option value="3600000">
+1 hora
+</option>
+
+
+<option value="86400000">
+1 dia
+</option>
+
+
+<option value="604800000">
+7 dias
+</option>
+
+
+<option value="2592000000">
+1 mes
+</option>
+
+
+<option value="7776000000">
+3 meses
+</option>
+
+
+<option value="23328000000">
+9 meses
+</option>
+
+
+<option value="31536000000">
+1 año
+</option>
+
+
+</select>
+
+
+
+<button id="clearHistory">
+
+🗑 Borrar historial
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+<section class="history-list">
+
+
+<h2>
+Animes vistos
+</h2>
+
+
+
+<div id="historyContainer">
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+<script>
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+
+document.body.classList.add("light");
+
+}
+
+</script>
+
+
+
+<script src="historial.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1985 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 5%;
+
+    background:rgba(18,18,18,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #262626;
+
+}
+
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+
+.logo i{
+
+    font-size:30px;
+    color:#9b5cff;
+
+}
+
+
+.logo h1{
+
+    color:#9b5cff;
+    font-size:30px;
+
+}
+
+/* =========================
+BETA LOGO
+========================= */
+
+.subs-logo{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+
+
+.beta{
+
+    position:absolute;
+
+    top:-14px;
+
+    right:-2px;
+
+    font-size:11px;
+
+    color:white;
+
+    background:#9b5cff;
+
+    padding:2px 6px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    line-height:1;
+
+}
+
+
+/* =========================
+BETA TEMA CLARO
+========================= */
+
+body.light .beta{
+
+    color:white;
+
+    background:#9b5cff;
+
+}
+
+
+/* =========================
+BETA EN MOVIL
+========================= */
+
+@media(max-width:650px){
+
+    .beta{
+
+        top:-12px;
+
+        right:-5px;
+
+        font-size:9px;
+
+        padding:2px 5px;
+
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .beta{
+
+        top:-10px;
+
+        right:-4px;
+
+        font-size:8px;
+
+        padding:2px 4px;
+
+    }
+
+}
+
+/* =========================
+NAV
+========================= */
+
+
+nav{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.25s;
+
+}
+
+
+nav a:hover{
+
+    color:#9b5cff;
+
+}
+
+
+/* =========================
+BUSCADOR
+========================= */
+
+
+.search{
+
+    display:flex;
+    align-items:center;
+
+    width:320px;
+
+    background:#1b1b1b;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:35px;
+
+    padding:12px 18px;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+
+
+.search:focus-within{
+
+    border-color:#9b5cff;
+
+    box-shadow:0 0 18px rgba(155,92,255,.35);
+
+}
+
+
+
+.search i{
+
+    color:#8b8b8b;
+
+    margin-right:10px;
+
+}
+
+
+
+.search input{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+/* X buscador */
+
+
+#clearSearch{
+
+    display:none;
+
+    color:#aaa;
+
+    cursor:pointer;
+
+    margin-left:10px;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+
+
+#clearSearch:hover{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* sugerencias */
+
+
+#suggestions{
+
+    position:absolute;
+
+    top:60px;
+
+    left:0;
+
+    width:100%;
+
+    background:#181818;
+
+    border:1px solid #292929;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    display:none;
+
+    z-index:2000;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+
+}
+
+
+
+.suggestion{
+
+    padding:13px 18px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+.suggestion:hover{
+
+    background:#9b5cff;
+
+}
+
+/* =========================
+BANNER
+========================= */
+
+
+.banner{
+
+    height:560px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.82)
+    ),
+
+    url("images/banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.banner-content{
+
+    max-width:900px;
+
+    padding:20px;
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+.banner-content h2{
+
+    font-size:68px;
+
+    margin-bottom:15px;
+
+    text-shadow:0 5px 20px rgba(0,0,0,.6);
+
+}
+
+
+
+.banner-content p{
+
+    font-size:22px;
+
+    color:#ddd;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* =========================
+BOTONES
+========================= */
+
+
+.banner-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.watch,
+.recommend{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:15px 34px;
+
+    border-radius:35px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.watch{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+.watch:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.recommend{
+
+    border:2px solid #9b5cff;
+
+    color:white;
+
+}
+
+
+
+.recommend:hover{
+
+    background:#9b5cff;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* =========================
+TITULOS
+========================= */
+
+
+.section-title{
+
+    max-width:1500px;
+
+    margin:60px auto 35px;
+
+    padding:0 35px;
+
+    font-size:38px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* =========================
+GRID
+========================= */
+
+
+.grid{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:0 35px 70px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+/* =========================
+CARDS
+========================= */
+
+
+.card{
+
+    background:#181818;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #292929;
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#9b5cff;
+
+    box-shadow:
+
+    0 18px 40px rgba(155,92,255,.3);
+
+}
+
+
+
+.image-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.image-box img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =========================
+ETIQUETAS
+========================= */
+
+
+.status{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    padding:7px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    background:#9b5cff;
+
+}
+
+
+
+.type{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    padding:7px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:rgba(0,0,0,.65);
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+
+
+/* =========================
+INFO TARJETA
+========================= */
+
+
+.card-info{
+
+    padding:20px;
+
+}
+
+
+
+.card-info h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card-info p{
+
+    color:#cfcfcf;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.card-info button{
+
+    width:100%;
+
+    margin-top:18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:14px;
+
+    background:#9b5cff;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+
+.card-info button:hover{
+
+    background:#a86eff;
+
+}
+
+/* =========================
+MENU 3 PUNTOS
+========================= */
+
+
+.menu-options{
+
+    position:relative;
+
+}
+
+
+
+#menuButton{
+
+    background:transparent;
+
+    border:none;
+
+    color:white;
+
+    font-size:32px;
+
+    width:35px;
+
+    height:35px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+#menuDropdown{
+
+    display:none;
+
+    position:absolute;
+
+    right:0;
+
+    top:45px;
+
+    width:230px;
+
+    background:#181818;
+
+    border-radius:16px;
+
+    padding:45px 12px 12px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+
+    z-index:999;
+
+}
+
+
+
+/* opciones */
+
+#menuDropdown a,
+#themeButton{
+
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    padding:0 15px;
+
+    margin-bottom:8px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:transparent;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+#menuDropdown a:hover,
+#themeButton:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* cerrar menu */
+
+
+.close-menu{
+
+    position:absolute;
+
+    right:12px;
+
+    top:10px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* opciones tema */
+
+
+#themeOptions{
+
+    display:none;
+
+    margin-top:5px;
+
+}
+
+
+
+#themeOptions button{
+
+    height:40px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#222;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+#themeOptions button:hover{
+
+    background:#9b5cff;
+
+}
+
+
+
+/* =========================
+FAVORITO EN POSTER
+========================= */
+
+
+.favorite-star{
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:15px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:#ffff00;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+
+
+.favorite-star.active{
+
+    color:#ffd700;
+
+}
+
+
+
+/* =========================
+FOOTER
+========================= */
+
+
+footer{
+
+    margin-top:50px;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#121212;
+
+    border-top:1px solid #262626;
+
+}
+
+
+
+footer h2{
+
+    color:#9b5cff;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+footer p{
+
+    color:#bdbdbd;
+
+}
+
+
+
+/* =========================
+SCROLLBAR
+========================= */
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#101010;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#9b5cff;
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b37aff;
+
+}
+
+
+
+/* =========================
+ANIMACION
+========================= */
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* sombras */
+
+
+.video-container,
+.card,
+.search{
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25);
+
+}
+
+/* =========================
+TEMA CLARO
+========================= */
+
+
+body.light{
+
+    background:#f3f3f3;
+
+    color:#111;
+
+}
+
+
+
+/* HEADER */
+
+body.light header{
+
+    background:#ffffff;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+/* LOGO */
+
+body.light .logo h1,
+body.light .logo i{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* NAV */
+
+body.light nav a{
+
+    color:#222;
+
+}
+
+
+
+body.light nav a:hover{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* BUSCADOR */
+
+body.light .search{
+
+    background:#dedede;
+
+    border-color:#c7c7c7;
+
+}
+
+
+
+body.light .search input{
+
+    color:#111;
+
+}
+
+
+
+body.light .search i{
+
+    color:#666;
+
+}
+
+
+
+body.light #clearSearch{
+
+    color:white;
+
+}
+
+
+
+body.light #clearSearch:hover{
+
+    color:#9b5cff;
+
+}
+
+
+
+body.light #suggestions{
+
+    background:#dedede;
+
+    border-color:#c7c7c7;
+
+}
+
+
+
+body.light .suggestion{
+
+    color:#111;
+
+}
+
+
+
+body.light .suggestion:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* BANNER TEXTO */
+
+body.light .banner-content p{
+
+    color:#444;
+
+}
+
+
+
+/* CARDS */
+
+body.light .card{
+
+    background:#ffffff;
+
+    border-color:#ddd;
+
+}
+
+
+
+body.light .card-info h3{
+
+    color:#111;
+
+}
+
+
+
+body.light .card-info p{
+
+    color:#555;
+
+}
+
+
+
+/* TIPO Y ESTADO */
+
+body.light .type{
+
+    color:white;
+
+    background:#9b5cff;
+
+}
+
+
+
+/* FILTROS */
+
+
+.filters{
+
+    max-width:1500px;
+
+    margin:30px auto;
+
+    padding:0 35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.filters select{
+
+    background:#181818;
+
+    color:white;
+
+    border:1px solid #292929;
+
+    border-radius:25px;
+
+    padding:12px 20px;
+
+}
+
+
+
+body.light .filters select{
+
+    background:white;
+
+    color:#111;
+
+    border-color:#ddd;
+
+}
+
+
+
+/* MENU CLARO */
+
+
+body.light #menuButton{
+
+    color:#111;
+
+}
+
+
+
+body.light #menuDropdown{
+
+    background:white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+body.light #menuDropdown a,
+body.light #themeButton{
+
+    color:#111;
+
+}
+
+
+
+body.light .close-menu{
+
+    color:#111;
+
+}
+
+
+
+body.light #themeOptions button{
+
+    background:#eee;
+
+    color:#111;
+
+}
+
+
+
+body.light #menuDropdown a:hover,
+body.light #themeButton:hover,
+body.light #themeOptions button:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+
+@media(max-width:1200px){
+
+
+.grid{
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(220px,1fr));
+
+}
+
+
+.banner-content h2{
+
+    font-size:58px;
+
+}
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+.search{
+
+    width:100%;
+
+    max-width:500px;
+
+}
+
+
+
+.banner{
+
+    height:420px;
+
+}
+
+
+
+.grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.banner{
+
+    height:360px;
+
+}
+
+
+
+.banner-content h2{
+
+    font-size:36px;
+
+}
+
+
+
+.banner-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.grid{
+
+    grid-template-columns:1fr;
+
+    padding:0 18px 40px;
+
+}
+
+
+
+.card img{
+
+    height:320px;
+
+}
+
+
+
+.section-title{
+
+    font-size:30px;
+
+}
+
+
+
+.filters{
+
+    flex-direction:column;
+
+    padding:0 18px;
+
+}
+
+
+
+.filters select{
+
+    width:100%;
+
+}
+
+
+}
+
+
+
+@media(max-width:430px){
+
+
+.logo h1{
+
+    font-size:24px;
+
+}
+
+
+
+.logo i{
+
+    font-size:24px;
+
+}
+
+
+
+.banner-content h2{
+
+    font-size:30px;
+
+}
+
+
+}
+
+/* =========================
+BUSCADOR FINAL
+========================= */
+
+
+/* Tema oscuro (original) */
+
+body:not(.light) .search{
+
+    background:#1b1b1b;
+
+    border:1px solid #2b2b2b;
+
+}
+
+
+body:not(.light) .search input{
+
+    color:white;
+
+}
+
+
+
+body:not(.light) #clearSearch{
+
+    color:#aaa;
+
+    margin-left:10px;
+
+}
+
+
+
+body:not(.light) #clearSearch:hover{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* Tema claro */
+
+body.light .search{
+
+    background:#dedede;
+
+    border:1px solid #c8c8c8;
+
+}
+
+
+
+body.light .search input{
+
+    color:#111;
+
+}
+
+
+
+body.light #clearSearch{
+
+    color:white;
+
+    margin-left:10px;
+
+}
+
+
+
+body.light #clearSearch:hover{
+
+    color:#9b5cff;
+
+}
+
+/* =========================
+BANNER TEMA CLARO
+========================= */
+
+body.light .banner{
+
+    background:
+
+    linear-gradient(
+    rgba(255,255,255,.55),
+    rgba(255,255,255,.75)
+    ),
+
+    url("images/banner.jpg");
+
+}
+
+
+body.light .banner-content h2{
+
+    color:#111;
+
+    text-shadow:none;
+
+}
+
+
+body.light .banner-content p{
+
+    color:#444;
+
+}
+
+/* =========================
+FOOTER TEMA CLARO
+========================= */
+
+body.light footer{
+
+    background:#ffffff;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+body.light footer p{
+
+    color:#555;
+
+}
+
+
+body.light footer h2{
+
+    color:#9b5cff;
+
+}
+
+
+/* =========================
+BOTON RECOMENDAR
+========================= */
+
+
+.recommend{
+
+    background:#9b5cff;
+
+    color:white;
+
+    border:2px solid #9b5cff;
+
+    box-shadow:
+
+    0 10px 25px rgba(155,92,255,.35);
+
+}
+
+
+
+.recommend:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 35px rgba(155,92,255,.55);
+
+}
+
+/* =========================
+PAGINACIÓN
+========================= */
+
+
+.pagination{
+
+    max-width:1500px;
+
+    margin:0 auto 70px;
+
+    padding:0 35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.pagination button{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#9b5cff;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+
+.pagination button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(155,92,255,.35);
+
+}
+
+
+
+.pagination button:disabled{
+
+    opacity:.4;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+
+#pageInfo{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+PAGINACIÓN TEMA CLARO
+========================= */
+
+
+body.light #pageInfo{
+
+    color:#111;
+
+}
+
+
+
+body.light .pagination button:disabled{
+
+    opacity:.5;
+
+}
+
+
+
+/* =========================
+PAGINACIÓN MÓVIL
+========================= */
+
+
+@media(max-width:650px){
+
+
+.pagination{
+
+    padding:0 18px;
+
+    gap:10px;
+
+}
+
+
+
+.pagination button{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+}
+
+
+#pageInfo{
+
+    font-size:15px;
+
+}
+
+
+}
+
+/* =========================
+LOADING SKELETON
+========================= */
+
+.loading-text{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    font-size:25px;
+
+    color:#aaa;
+
+    padding:50px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+.skeleton-card{
+
+    background:#181818;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #292929;
+
+}
+
+
+
+.skeleton-image{
+
+    height:340px;
+
+    background:#242424;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+.skeleton-info{
+
+    padding:20px;
+
+}
+
+
+
+.skeleton-line{
+
+    height:18px;
+
+    background:#242424;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+.skeleton-line.small{
+
+    width:60%;
+
+}
+
+
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}
+
+/* =========================
+BOTON ANIME ALEATORIO
+========================= */
+
+
+#randomAnime{
+
+    background:#9b5cff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:25px;
+
+    padding:12px 22px;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+#randomAnime:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(155,92,255,.35);
+
+}
+
+#latestSection{
+
+    margin-top:40px;
+
+}

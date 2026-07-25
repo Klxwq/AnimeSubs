@@ -1,0 +1,734 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+
+
+/* HEADER */
+
+header{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+    padding:20px 8%;
+
+    background:#121212;
+
+    border-bottom:1px solid #242424;
+
+}
+
+
+header h1{
+
+    color:#9b5cff;
+
+}
+
+
+
+.back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#1d1d1d;
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    transition:.3s;
+
+}
+
+
+
+.back:hover{
+
+    background:#9b5cff;
+
+}
+
+
+
+
+
+/* INFO */
+
+.anime-info{
+
+    display:flex;
+
+    gap:40px;
+
+    padding:50px 8%;
+
+}
+
+
+
+.anime-info img{
+
+    width:280px;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+.info{
+
+    max-width:700px;
+
+}
+
+
+
+.info h2{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.info p{
+
+    color:#ccc;
+
+    margin:12px 0;
+
+    line-height:1.5;
+
+}
+
+
+
+
+
+/* VIDEO */
+
+.player{
+
+    padding:0 8%;
+
+}
+
+
+
+.player h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.video-container{
+
+    width:100%;
+
+    background:black;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+.video-container{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background:#000;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+#video,
+#iframePlayer{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+    display:block;
+
+    background:rgb(0, 0, 0);
+
+}
+
+
+
+#iframePlayer{
+
+    display:none;
+
+}
+
+
+
+
+
+/* TITULOS */
+
+.title{
+
+    margin:45px 8% 25px;
+
+    font-size:32px;
+
+}
+
+
+
+
+
+/* EPISODIOS */
+
+#episodes{
+
+    padding:0 8%;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(150px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.episode-card{
+
+    background:#181818;
+
+    border:1px solid #252525;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.episode-card:hover{
+
+    transform:translateY(-5px);
+
+    background:#9b5cff;
+
+}
+
+
+
+.episode-name{
+
+    color:#ccc;
+
+}
+
+
+
+
+
+/* TEMPORADAS */
+
+#seasons{
+
+    padding:0 8% 60px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(230px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.season-card{
+
+    background:#181818;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid #252525;
+
+}
+
+
+
+.season-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.season-card button{
+
+    background:#9b5cff;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+#iframePlayer{
+
+    height:250px;
+
+}
+
+.anime-info{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.anime-info img{
+
+    width:230px;
+
+    height:330px;
+
+}
+
+
+.info h2{
+
+    font-size:35px;
+
+}
+
+
+}
+
+.not-available{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#151515;
+
+    color:#aaa;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+
+}
+
+.video-message{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#151515;
+    color:#aaa;
+    font-size:28px;
+    font-weight:bold;
+}
+
+
+.episode-card.disabled{
+
+opacity:0.5;
+
+cursor:not-allowed;
+
+}
+
+.episode-card{
+
+    min-height: 74px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.episode-name{
+
+    margin: 0;
+
+    text-align: center;
+
+}
+
+/* =========================
+TEMA CLARO ANIME
+========================= */
+
+
+body.light{
+
+    background:#ffffff;
+
+    color:#111;
+
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+
+body.light header{
+
+    background:#ffffff;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+body.light header h1{
+
+    color:#9b5cff;
+
+}
+
+
+
+body.light .back{
+
+    background:#f2f2f2;
+
+    color:#111;
+
+}
+
+
+
+body.light .back:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+INFORMACION ANIME
+========================= */
+
+
+body.light .anime-info{
+
+    background:#ffffff;
+
+}
+
+
+
+body.light .info h2{
+
+    color:#111;
+
+}
+
+
+
+body.light .info p{
+
+    color:#333;
+
+}
+
+
+
+/* =========================
+VIDEO
+========================= */
+
+
+body.light .video-container{
+
+    background:#000;
+
+}
+
+
+
+/* =========================
+TITULOS
+========================= */
+
+
+body.light .title,
+body.light .player h2{
+
+    color:#111;
+
+}
+
+
+
+/* =========================
+EPISODIOS
+========================= */
+
+
+body.light #episodes{
+
+    background:#ffffff;
+
+}
+
+
+
+body.light .episode-card{
+
+    background:#f2f2f2;
+
+    color:#111;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+body.light .episode-name{
+
+    color:#111;
+
+}
+
+
+
+body.light .episode-card:hover{
+
+    background:#9b5cff;
+
+}
+
+
+
+body.light .episode-card:hover .episode-name{
+
+    color:white;
+
+}
+
+
+
+/* =========================
+TEMPORADAS
+========================= */
+
+
+body.light .season-card{
+
+    background:#ffffff;
+
+    color:#111;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+body.light .season-card h3{
+
+    color:#111;
+
+}
+
+
+
+/* =========================
+MENSAJES NO DISPONIBLE
+========================= */
+
+
+body.light .not-available,
+body.light .video-message{
+
+    background:#f2f2f2;
+
+    color:#111;
+
+}
+
+
+
+/* =========================
+BOTONES
+========================= */
+
+
+body.light button{
+
+    color:white;
+
+}
+
+/* LOGO ANIMESUBS */
+
+.logo-page{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.logo-page i{
+
+    font-size:30px;
+
+    color:#9b5cff;
+
+}
+
+
+.logo-page .as{
+
+    color:#9b5cff;
+
+    font-size:30px;
+
+    margin:0;
+
+}
+
+/* =========================
+PLAYER MESSAGE
+========================= */
+
+.video-container{
+
+position:relative;
+
+}
+
+#playerMessage{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+padding:16px 30px;
+
+background:rgba(0,0,0,.75);
+
+color:white;
+
+font-size:22px;
+
+font-weight:bold;
+
+border-radius:16px;
+
+backdrop-filter:blur(8px);
+
+opacity:0;
+
+transition:.25s;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+#playerMessage.show{
+
+opacity:1;
+
+}

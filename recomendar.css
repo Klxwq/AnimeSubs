@@ -1,0 +1,810 @@
+*{
+
+    box-sizing:border-box;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+body{
+
+    margin:0;
+
+    background:#0f0f0f;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+HEADER
+========================= */
+
+
+header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    padding:25px 5%;
+
+    background:#121212;
+
+    border-bottom:1px solid #262626;
+
+}
+
+
+
+.logo-page{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.logo-page i{
+
+    font-size:30px;
+
+    color:#9b5cff;
+
+}
+
+
+
+.logo-page .as{
+
+    margin:0;
+
+    font-size:30px;
+
+    color:#9b5cff;
+
+}
+
+
+
+.back{
+
+    position:absolute;
+
+    left:5%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#1d1d1d;
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.back:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+CONTENIDO
+========================= */
+
+
+main{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:30px 20px;
+
+}
+
+
+
+.form-container,
+.lista-container{
+
+    background:#181818;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+/* TITULOS */
+
+
+h2{
+
+    text-align:center;
+
+    color:#9b5cff;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.subtitle{
+
+    text-align:center;
+
+    color:#aaa;
+
+    font-size:17px;
+
+    margin-top:15px;
+
+    margin-bottom:55px;
+
+}
+
+
+
+/* =========================
+FORMULARIO
+========================= */
+
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:bold;
+
+}
+
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#252525;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+textarea{
+
+    resize:none;
+
+    height:120px;
+
+}
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#777;
+
+}
+
+
+
+
+
+button{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#9b5cff;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    background:#8b5cf6;
+
+}
+
+
+
+/* MENSAJE */
+
+
+#mensaje{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    color:#00ff88;
+
+}
+
+
+
+/* =========================
+RECOMENDACIONES
+========================= */
+
+
+.recomendacion{
+
+    background:#222;
+
+    padding:18px;
+
+    margin-top:15px;
+
+    border-radius:14px;
+
+}
+
+
+
+.recomendacion h3{
+
+    margin:0 0 12px;
+
+    color:#9b5cff;
+
+}
+
+
+
+.recomendacion p{
+
+    line-height:1.5;
+
+}
+
+
+
+.recomendacion span{
+
+    color:#aaa;
+
+}
+
+
+
+/* TIEMPO */
+
+
+.recommend-time{
+
+    width:100%;
+
+    margin-top:20px;
+
+    text-align:right;
+
+}
+
+
+
+.recommend-time p{
+
+    margin:4px 0;
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+
+
+/* =========================
+MOVIL
+========================= */
+
+
+@media(max-width:600px){
+
+
+main{
+
+    width:95%;
+
+    padding:15px 10px;
+
+}
+
+
+
+.form-container,
+.lista-container{
+
+    padding:20px;
+
+}
+
+
+
+header{
+
+    padding:20px;
+
+}
+
+
+
+.logo-page .as{
+
+    font-size:25px;
+
+}
+
+
+
+.logo-page i{
+
+    font-size:25px;
+
+}
+
+
+
+.back{
+
+    left:15px;
+
+    padding:8px 14px;
+
+}
+
+
+
+}
+
+/* =========================
+TEMA CLARO
+========================= */
+
+
+body.light{
+
+    background:#ffffff;
+
+    color:#111;
+
+}
+
+
+
+/* HEADER */
+
+
+body.light header{
+
+    background:#ffffff;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+body.light .back{
+
+    background:#f2f2f2;
+
+    color:#111;
+
+}
+
+
+
+body.light .back:hover{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+/* LOGO */
+
+
+body.light .logo-page .as,
+body.light .logo-page i{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* CAJAS */
+
+
+body.light .form-container,
+body.light .lista-container{
+
+    background:#ffffff;
+
+    color:#111;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    border:1px solid #ddd;
+
+}
+
+
+
+/* TEXTOS */
+
+
+body.light h2{
+
+    color:#9b5cff;
+
+}
+
+
+
+body.light .subtitle{
+
+    color:#555;
+
+}
+
+
+
+body.light label{
+
+    color:#222;
+
+}
+
+
+
+body.light p{
+
+    color:#222;
+
+}
+
+
+
+/* INPUTS */
+
+
+body.light input,
+body.light textarea{
+
+    background:#f5f5f5;
+
+    color:#111;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+body.light input::placeholder,
+body.light textarea::placeholder{
+
+    color:#777;
+
+}
+
+
+
+
+
+/* BOTON */
+
+
+body.light button{
+
+    background:#9b5cff;
+
+    color:white;
+
+}
+
+
+
+body.light button:hover{
+
+    background:#8b5cf6;
+
+}
+
+
+
+/* RECOMENDACIONES */
+
+
+body.light .recomendacion{
+
+    background:#ffffff;
+
+    color:#111;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+body.light .recomendacion h3{
+
+    color:#9b5cff;
+
+}
+
+
+
+body.light .recomendacion span{
+
+    color:#555;
+
+}
+
+
+
+/* FECHAS */
+
+
+body.light .recommend-time p{
+
+    color:#555;
+
+}
+
+
+
+
+
+/* =========================
+AJUSTES EXTRA
+========================= */
+
+
+.recommend-time p{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:13px;
+
+}
+
+
+
+body.light main{
+
+    background:#ffffff;
+
+}
+
+
+
+body.light section{
+
+    background:#ffffff;
+
+}
+
+
+
+/* evita colores negros perdidos */
+
+
+body.light .recomendacion p,
+body.light .lista-container p{
+
+    color:#222;
+
+}
+
+
+
+/* =========================
+ICONO PC LOGO
+========================= */
+
+
+.logo-page i{
+
+    color:#9b5cff;
+
+}
+
+
+
+.logo-page .as{
+
+    color:#9b5cff;
+
+}
+
+
+
+/* =========================
+ANIMACIONES
+========================= */
+
+
+.form-container,
+.lista-container,
+.recomendacion{
+
+    transition:.3s;
+
+}
+
+
+
+.recomendacion:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#9b5cff;
+
+}
+
+
+
+/* =========================
+TABLET
+========================= */
+
+
+@media(max-width:800px){
+
+
+main{
+
+    max-width:95%;
+
+}
+
+
+
+.subtitle{
+
+    margin-bottom:40px;
+
+}
+
+
+}
+
+
+
+/* =========================
+TELEFONOS PEQUENOS
+========================= */
+
+
+@media(max-width:430px){
+
+
+.logo-page .as{
+
+    font-size:22px;
+
+}
+
+
+
+.logo-page i{
+
+    font-size:22px;
+
+}
+
+
+
+.back{
+
+    font-size:14px;
+
+}
+
+
+
+.form-container,
+.lista-container{
+
+    padding:16px;
+
+}
+
+
+
+.recommend-time p{
+
+    font-size:12px;
+
+}
+
+
+}

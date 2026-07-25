@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Favoritos - AnimeSubs</title>
+
+<link rel="stylesheet" href="favoritos.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Volver
+
+</a>
+
+
+
+<h1>
+
+⭐ Favoritos
+
+</h1>
+
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+<section>
+
+
+<h2 class="title">
+
+Mis animes favoritos
+
+</h2>
+
+
+
+<div id="favoritesGrid" class="grid">
+
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+    document.body.classList.add("light");
+}
+
+</script>
+
+<script src="favoritos.js"></script>
+
+
+</body>
+
+</html>

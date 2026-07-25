@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AnimeSubs</title>
+
+
+<link rel="stylesheet" href="anime.css">
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<a href="index.html" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Volver
+
+</a>
+
+
+<div class="logo-page">
+
+    <i class="fa-solid fa-tv"></i>
+
+    <h1 class="as">
+        AnimeSubs
+    </h1>
+
+</div>
+
+
+</header>
+
+
+
+
+
+<main>
+
+
+<section class="anime-info">
+
+
+<img id="cover">
+
+
+
+<div class="info">
+
+
+<h2 id="title">
+Anime
+</h2>
+
+
+
+<p id="genre"></p>
+
+<p id="type"></p>
+
+<p id="year"></p>
+
+<p id="rating"></p>
+
+<p id="status"></p>
+
+
+<p id="description"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="player">
+
+
+<h2 id="episodeTitle">
+Episodio 1
+</h2>
+
+
+<div class="video-container">
+
+    <div id="playerMessage"></div>
+
+    <video id="video" playsinline></video>
+
+    <iframe
+        id="iframePlayer"
+        allowfullscreen
+        allow="autoplay; fullscreen"
+        frameborder="0">
+    </iframe>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="episodesSection">
+
+
+<h2 class="title">
+Episodios
+</h2>
+
+
+<div id="episodes">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+
+
+<br>
+
+
+<div id="seasons">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+<script>
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "light"){
+    document.body.classList.add("light");
+}
+
+</script>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script src="anime.js"></script>
+
+</body>
+
+</html>
