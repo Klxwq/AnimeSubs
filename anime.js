@@ -516,6 +516,10 @@ function playEpisode(index){
 
     currentEpisode = index + 1;
 
+    if(window.currentAnime.type !== "Pelicula"){
+    episodeTitle.textContent = "Episodio " + (index + 1);
+}
+    
     if(!episode || !episode.url){
 
         showVideoMessage("No disponible");
