@@ -12,8 +12,8 @@
     "season": 1,
     "episodes": [
       { "number": 1, "type": "embed", "url": "https://mega.nz/embed/!1OF3mRqY!KLLMoDAXgQVE1HCqg7yLChjBjKDTjoA0aq_gD4Y5MBg" },
-      { "number": 2, "type": "", "url": "" },
-      { "number": 3, "type": "", "url": "" },
+      { "number": 2, "type": "embed", "url": "https://youtu.be/_Oe8YbJRCVs?si=y8Bx52DHIuFAVsa2" },
+      { "number": 3, "type": "embed", "url": "https://youtu.be/DP_ciX0VZGc?si=9Zh5TBZfL0fXqKar" },
       { "number": 4, "type": "", "url": "" },
       { "number": 5, "type": "", "url": "" },
       { "number": 6, "type": "", "url": "" },
